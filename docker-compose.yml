@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  cli-codewars:
+    container_name: cli
+    build:
+      context: ./docker/php-cli
+      dockerfile: Dockerfile
+    image: cli-codewars:1.0.0
+    user: "1000:1000"
+    volumes:
+      - ./:/app
